@@ -1,7 +1,10 @@
 [![Visual&nbsp;Studio Marketplace](https://img.shields.io/visual-studio-marketplace/v/DigitalBrainstem.javascript-ejs-support.svg?label=Visual%20Studio%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=DigitalBrainstem.javascript-ejs-support)
 [![License](https://img.shields.io/github/license/Digitalbrainstem/ejs-grammar.svg)](https://github.com/Digitalbrainstem/ejs-grammar/blob/master/LICENSE)
 
-# EJS Language Support #
+# Fork of EJS Language Support with whitespace handling #
+
+This fork adds whitespace handling snippets to the original extension, in order to be used with yeoman
+
 
 ### NOTICE: If you are not seeing any style, set your file associations for "*.ejs" to html ###
 
@@ -45,6 +48,17 @@ If there is anything that I missed or features you would like this to include. [
 | `ejsif→`   | `<%`       | `if` Statement with condition                                                                                     |
 | `ejselif→` | `<%`       | `else if` Statement - *Middle section only.* Assumes you have already written the first `if` statement. |
 | `ejselse→` | `<%`       | `else` Statement - *Middle section only.* Assumes you have already written the first `if` statement.    |
+
+**Whitespace handling (slurping) snippets.**
+
+| Snippet→   | Alternate  | Output                                                                                                  |
+| ---------- | --------   | ------------------------------------------------------------------------------------------------------- |
+| `wejs→`     | `<%_`       | `<%_ _%>` - No output tag                                                                                 |
+| `wejsfor→`  | `<%_`       | `for` Javascript Loop                                                                                             |
+| `wejseach→` | `<%_`       | `forEach` Javascript Loop                                                                                     |
+| `wejsif→`   | `<%_`       | `if` Statement with condition                                                                                     |
+| `wejselif→` | `<%_`       | `else if` Statement - *Middle section only.* Assumes you have already written the first `if` statement. |
+| `wejselse→` | `<%_`       | `else` Statement - *Middle section only.* Assumes you have already written the first `if` statement.    |
 
 ## EJS docs ##
 
