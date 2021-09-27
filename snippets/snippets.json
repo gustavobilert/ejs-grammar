@@ -6,6 +6,13 @@
     ],
     "description": "EJS No Output"
   },
+  "EJS No Output (Whitespace handling)": {
+    "prefix": "wejs",
+    "body": [
+      "<%_ $1 _%> $2"
+    ],
+    "description": "EJS No Output (Whitespace handling)"
+  },
   "EJS Output Value": {
     "prefix": "ejsout",
     "body": [
@@ -50,6 +57,15 @@
     ],
     "description": "EJS For Loop"
   },
+  "EJS For Loop (Whitespace handling)": {
+    "prefix": "wejsfor",
+    "body": [
+      "<%_ for( let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++ ) { _%>",
+      "$3",
+      "<%_ } _%>"
+    ],
+    "description": "EJS For Loop (Whitespace handling)"
+  },
   "EJS ForEach": {
     "prefix": "ejseach",
     "body": [
@@ -58,6 +74,15 @@
       "<% }) %>"
     ],
     "description": "EJS ForEach Loop"
+  },
+  "EJS ForEach (Whitespace handling)": {
+    "prefix": "wejseach",
+    "body": [
+      "<%_ ${1:array}.forEach(${2:element} => { _%>",
+      " $3",
+      "<%_ }) _%>"
+    ],
+    "description": "EJS ForEach Loop (Whitespace handling)"
   },
   "EJS If Statement": {
     "prefix": "ejsif",
@@ -68,13 +93,30 @@
     ],
     "description": "EJS if statement"
   },
+  "EJS If Statement (Whitespace handling)": {
+    "prefix": "wejsif",
+    "body": [
+      "<%_ if (${1:condition}) { _%>",
+      " $2",
+      "<%_ } _%>"
+    ],
+    "description": "EJS if statement (Whitespace handling)"
+  },
   "EJS Else Statement": {
     "prefix": "ejselse",
     "body": [
       "<% } else { %>",
       " $1"
     ],
-    "description": "EJS if statement"
+    "description": "EJS else statement"
+  },
+  "EJS Else Statement (Whitespace handling)": {
+    "prefix": "wejselse",
+    "body": [
+      "<%_ } else { _%>",
+      " $1"
+    ],
+    "description": "EJS else statement (Whitespace handling)"
   },
   "EJS Else If Statement": {
     "prefix": "ejselif",
@@ -82,7 +124,15 @@
       "<% } else if ({$1:condition}) { %>",
       " $2"
     ],
-    "description": "EJS if statement"
+    "description": "EJS else if statement"
+  },
+  "EJS Else If Statement (Whitespace handling)": {
+    "prefix": "wejselif",
+    "body": [
+      "<%_ } else if ({$1:condition}) { _%>",
+      " $2"
+    ],
+    "description": "EJS else if statement (Whitespace handling)"
   },
 
   "EJS TAG": {
@@ -91,6 +141,13 @@
       "<% $1 %> $2"
     ],
     "description": "EJS No Output"
+  },
+  "EJS TAG (Whitespace handling)": {
+    "prefix": "<%_",
+    "body": [
+      "<%_ $1 _%> $2"
+    ],
+    "description": "EJS No Output (Whitespace handling)"
   },
   "EJS TAG Output Value": {
     "prefix": "<%=",
@@ -127,14 +184,14 @@
     ],
     "description": "EJS include statement"
   },
-  "EJS TAG For Loop": {
-    "prefix": "<% ",
+  "EJS TAG For Loop (Whitespace handling)": {
+    "prefix": "<%_ ",
     "body": [
-      "<% for( let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++ ) { %>",
+      "<%_ for( let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++ ) { _%>",
       "$3",
-      "<% } %>"
+      "<%_ } _%>"
     ],
-    "description": "EJS For Loop"
+    "description": "EJS For Loop (Whitespace handling)"
   },
   "EJS TAG ForEach": {
     "prefix": "<% ",
@@ -145,6 +202,15 @@
     ],
     "description": "EJS ForEach Loop"
   },
+  "EJS TAG ForEach (Whitespace handling)": {
+    "prefix": "<%_ ",
+    "body": [
+      "<%_ ${1:array}.forEach(${2:element} => { _%>",
+      " $3",
+      "<%_ }) _%>"
+    ],
+    "description": "EJS ForEach Loop (Whitespace handling)"
+  },
   "EJS TAG If Statement": {
     "prefix": "<% ",
     "body": [
@@ -154,13 +220,30 @@
     ],
     "description": "EJS if statement"
   },
+  "EJS TAG If Statement (Whitespace handling)": {
+    "prefix": "<%_ ",
+    "body": [
+      "<%_ if (${1:condition}) { _%>",
+      " $2",
+      "<%_ } _%>"
+    ],
+    "description": "EJS if statement (Whitespace handling)"
+  },
   "EJS TAG Else Statement": {
     "prefix": "<% ",
     "body": [
       "<% } else { %>",
       " $1"
     ],
-    "description": "EJS if statement"
+    "description": "EJS else statement"
+  },
+  "EJS TAG Else Statement (Whitespace handling)": {
+    "prefix": "<%_ ",
+    "body": [
+      "<%_ } else { _%>",
+      " $1"
+    ],
+    "description": "EJS else statement (Whitespace handling)"
   },
   "EJS TAG Else If Statement": {
     "prefix": "<% ",
@@ -168,6 +251,14 @@
       "<% } else if ({$1:condition}) { %>",
       " $2"
     ],
-    "description": "EJS if statement"
+    "description": "EJS else if statement"
+  },
+  "EJS TAG Else If Statement (Whitespace handling)": {
+    "prefix": "<%_ ",
+    "body": [
+      "<%_ } else if ({$1:condition}) { _%>",
+      " $2"
+    ],
+    "description": "EJS else if statement (Whitespace handling)"
   }
 }
